@@ -1,4 +1,4 @@
-# API criada em Node.js + Sequelize/Banco Postgres em container Docker
+# API criada em Node.js + Sequelize / Banco Postgres em container Docker
 
 Projeto desenvolvido para o Desafio da empresa Growdev.
 
