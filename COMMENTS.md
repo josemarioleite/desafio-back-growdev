@@ -50,3 +50,16 @@ Agora poderá ser usada e testada.
 #### Lembre-se
 
 Nos Seeds da tabela de users tem um e-mail e senha padrão para poder acessar a API e pegar o token de validação.
+
+
+## Como foi feita ?
+
+Para esse projeto foi usado:
+
+    - ORM Sequelize para conexão/migrations/atualização do banco;
+    - Banco de dados Postgres;
+    - Node.js com Typescript;
+    - Arquitetura MVC (model-view-controller);
+    - Jest para testes.
+
+Todo esse projeto foi feito em pouco tempo mas com muito carinho <3.
