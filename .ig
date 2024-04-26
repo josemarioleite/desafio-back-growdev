@@ -1,1 +1,0 @@
-docker run --name desafio -e POSTGRES_USER=root -e POSTGRES_PASSWORD=102030 -e POSTGRES_DB=desafio -d postgres

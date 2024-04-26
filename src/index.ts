@@ -7,7 +7,7 @@ import routes from './routes/index'
 const cors = require('cors')
 
 const app: Application = express()
-const PORT = process.env.API_PORT || 3000
+const PORT = process.env.API_PORT || 3800
 
 app.use(cors())
 app.use(AuthorizationMiddleware)
