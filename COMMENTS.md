@@ -62,4 +62,16 @@ Para esse projeto foi usado:
     - Arquitetura MVC (model-view-controller);
     - Jest para testes.
 
+### Sugestão de melhorias
+
+Caso eu tivesse mais tempo o que poderia fazer melhorar ?
+
+Pensando nisto eu anotei algumas coisas que poderiam ser feitas, como:
+    - Verificar se o CPF é válido;
+    - Melhorar a forma de autenticação, melhorando a segurança;
+    - Incluir mais campos de verificação como: createdBy(ID de quem criou), updatedBy(id de quem atualizou por último), deletedAt(quando foi deletado) e deletedBy(id de quem deletou);
+    - Inserir permissão de usuário, definindo os níveis de acesso(Ex: visualizar somente os meus dados, gerenciar dados de equipe, gerenciar dados de todos);
+
+Essas são algumas das anotações, no qual com tempo hábil poderiam ser feitas, sem contar as integras contínuas, mais testes, entre outros...
+
 Todo esse projeto foi feito em pouco tempo mas com muito carinho <3.
