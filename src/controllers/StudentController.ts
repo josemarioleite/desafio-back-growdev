@@ -10,28 +10,25 @@ class StudentController {
 
       return res.status(201).json(newStudent)
     } catch (error) {
-      console.error('Não foi possível criar novo aluno: \n', error)
-
       return res.status(500).json({ message: 'Falha ao criar novo aluno' })
     }
   }
 
   public static async createAll(req: Request, res: Response): Promise<Response> {
     try {
-      const studentsData = req.body as { name: string, email: string, cpf: string }[];
+      const studentsData = req.body as { name: string, email: string, cpf: string }[]
   
       if (!Array.isArray(studentsData)) {
-        return res.status(400).json({ message: 'Corpo da requisição deve conter um array de alunos' });
+        return res.status(400).json({ message: 'Corpo da requisição deve conter um array de alunos' })
       }
   
       const createdStudents = await Promise.all(studentsData.map(async student => {
-        return await Student.create(student);
-      }));
+        return await Student.create(student)
+      }))
   
-      return res.status(201).json(createdStudents);
+      return res.status(201).json(createdStudents)
     } catch (error) {
-      console.error('Não foi possível criar novos alunos:', error);
-      return res.status(500).json({ message: 'Falha ao criar novos alunos' });
+      return res.status(500).json({ message: 'Falha ao criar novos alunos' })
     }
   }
 
@@ -59,8 +56,6 @@ class StudentController {
 
       return res.status(200).json(students)
     } catch (error) {
-      console.error('Não foi possível obter os alunos: \n', error)
-
       return res.status(500).json({ message: 'Erro ao obter os alunos' })
     }
   }
@@ -78,7 +73,6 @@ class StudentController {
   
       return res.status(200).json({ message: 'Aluno excluído com sucesso' })
     } catch (error) {
-      console.error('Erro ao excluir aluno:', error)
       return res.status(500).json({ message: 'Erro ao excluir aluno' })
     }
   }
@@ -98,7 +92,6 @@ class StudentController {
   
       return res.status(200).json({ message: 'O aluno foi atualizado com sucesso' })
     } catch (error) {
-      console.error('Erro ao atualizar aluno:', error)
       return res.status(500).json({ message: 'Erro ao atualizar aluno' })
     }
   }

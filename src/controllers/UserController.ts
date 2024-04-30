@@ -8,9 +8,7 @@ class UserController {
       
       return res.status(200).json(users)
     } catch (error) {
-      console.error('Erro ao obter usuários', error)
-
-      return res.status(200).json({message: 'Falha ao obter usuários'})
+      return res.status(500).json({message: 'Falha ao obter usuários'})
     }
   }
 
@@ -22,8 +20,6 @@ class UserController {
 
       return res.status(201).json({ user: newUser, token })
     } catch (error) {
-      console.error('Erro ao criar usuário: \n', error)
-
       return res.status(500).json({ message: 'Não foi possível criar um novo usuário' })
     }
 }
@@ -47,8 +43,6 @@ class UserController {
 
         return res.status(200).json({ user, token })
     } catch (error) {
-        console.error('Erro ao fazer login: \n', error)
-
         return res.status(500).json({ message: 'Não foi possível fazer login' })
     }
   }
